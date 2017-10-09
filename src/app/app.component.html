@@ -1,20 +1,189 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{title}}!
-  </h1>
-  <img width="300" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<div class="app">
+  <div class="hero">
+    <h1>
+      <span class="name">
+        <span class="arts">Arts</span>
+        <span class="of">of</span>
+        <span class="fashion">Fashion</span>
+        <span class="foundation">Foundation</span>
+      </span>
+      <span class="presents">presents</span>
+      <span class="show">2017 Fashion Show</span>
+    </h1>
 
+    <a
+      class="jump-to-tickets"
+      href="#tickets">
+      Tickets
+    </a>
+  </div>
+
+  <div class="content">
+
+    <section class="event-details">
+
+      <h2>
+        2017 Theme
+      </h2>
+      <div class="detail">
+        <p class="theme">Displacement</p>
+      </div>
+
+      <h2>
+        International Fashion Student Competition
+      </h2>
+      <div class="detail">
+        <p class="date">October 22</p>
+        <p class="location">555 California St</p>
+      </div>
+
+      <h3>Runway Show</h3>
+      <div class="detail">
+        <p class="time">2pm - 4pm</p>
+        <p class="location">Plaza</p>
+      </div>
+
+      <h2>
+        Fashion Seminar Awards Ceremony
+      </h2>
+      <div class="detail">
+        <p class="date">October 23</p>
+        <p class="location">555 California St</p>
+      </div>
+      
+      <h3>Portfolio Review</h3>
+      <div class="detail">
+        <p class="time">10am - 12pm</p>
+        <p class="location">Gallery</p>
+      </div>
+
+      <h3>Fashion Seminar</h3>
+      <div class="detail">
+        <p class="time">2pm - 4pm</p>
+        <p class="location">Auditorium</p>
+      </div>
+
+      <h3>Cocktail Reception</h3>
+      <div class="detail">
+        <p class="time">6pm</p>
+        <p class="location">Gallery</p>
+      </div>
+
+      <h3>Awards Ceremony</h3>
+      <div class="detail">
+        <p class="time">7pm - 9pm</p>
+        <p class="location">Auditorium</p>
+      </div>
+    </section>
+
+    <section class="ticketing-details">
+
+      <h2 id="tickets">Fashion Show Tickets</h2>
+    
+      <table class="pricing">
+        <tr>
+          <td class="color red"></td>
+          <td class="seat-type">Benefactor Row Seat</td>
+          <td class="price">$300</td>
+          <td class="purchase">
+            <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+              <input type="hidden" name="cmd" value="_s-xclick">
+              <input type="hidden" name="hosted_button_id" value="M6LJPFSN8TSDN">
+              <input type="submit" value="Purchase">
+            </form>
+          </td>
+        </tr>
+        <tr>
+          <td class="color pink"></td>
+          <td class="seat-type">Premium Front Row Seat</td>
+          <td class="price">$125</td>
+          <td class="purchase">
+            <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+              <input type="hidden" name="cmd" value="_s-xclick">
+              <input type="hidden" name="hosted_button_id" value="GQSEJ2S2EY8U6">
+              <input type="submit" value="Purchase">
+            </form>
+          </td>
+        </tr>
+        <tr>
+          <td class="color orange"></td>
+          <td class="seat-type">Front Row Seat</td>
+          <td class="price">$60</td>
+          <td class="purchase">
+            <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+              <input type="hidden" name="cmd" value="_s-xclick">
+              <input type="hidden" name="hosted_button_id" value="PCZTEM9DBCPAY">
+              <input type="submit" value="Purchase">
+            </form>
+          </td>
+        </tr>
+        <tr>
+          <td class="color grey"></td>
+          <td class="seat-type">Second Row Seat</td>
+          <td class="price">$30</td>
+          <td class="purchase">
+            <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+              <input type="hidden" name="cmd" value="_s-xclick">
+              <input type="hidden" name="hosted_button_id" value="88VL2LDHGFHZC">
+              <input type="submit" value="Purchase">
+            </form>
+          </td>
+        </tr>
+      </table>
+
+      <h2>Seating</h2>
+
+      <img class="seating-layout" src="/assets/images/seating-layout-compact.jpg">
+
+    </section>
+
+    <section class="participants">
+      <h2>Participants</h2>
+      <!-- <p>
+        Below is the list of students selected for the 2017 Arts of Fashion Competition.
+        Congratulations!
+      </p>
+      
+      <h3>Fashion</h3>
+      
+      <div class="students">
+        <div
+          class="student"
+          *ngFor="let student of students.fashion">
+          <div class="name">{{student.name}}</div>
+          <div class="location">{{student.location}}, {{student.country}}</div>
+          <div class="school">{{student.school}}</div>
+        </div>
+      </div>
+      
+      <h3>Accessory</h3>
+      
+      <div class="students">
+        <div
+          class="student"
+          *ngFor="let student of students.accessory">
+          <div class="name">{{student.name}}</div>
+          <div class="location">{{student.location}}, {{student.country}}</div>
+          <div class="school">{{student.school}}</div>
+        </div>
+      </div> -->
+
+    </section>
+
+    <section class="about">
+      <h2>About Us</h2>
+      <p class="description">
+        The Arts of Fashion Foundation is a San Francisco-based 501(c)(3), 
+        public, non-profit organization, linking both academics and professionals 
+        alike and is dedicated in fostering international cultural exchange 
+        through the creation of a variety of educational programs meant to 
+        facilitate critical thinking and advance the field of fashion among 
+        artists, designers, scholars and students. The primary focus of the 
+        foundation is the continuous support of creativity and design process 
+        in fashion and the arts linked to it.
+      </p>
+    </section>
+
+    <img class="sketch-1" src="/assets/images/sketch-3-block-1.jpg">
+    <img class="sketch-2" src="/assets/images/sketch-3-block-2.jpg">
+</div>

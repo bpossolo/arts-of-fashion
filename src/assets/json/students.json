@@ -1,0 +1,25 @@
+{
+  "fashion": [
+    {
+      "name": "YuJeong CHOI",
+      "location": "Seoul",
+      "country": "South Korea",
+      "school": "Myongji University"
+    }
+  ],
+
+  "accessory": [
+    {
+      "name": "Hau Yin KONG",
+      "location": "Savannah, GA",
+      "country": "USA",
+      "school": "Savannah College of Art & Design"
+    },
+    {
+      "name": "Lufei JIN",
+      "location": "Beijing",
+      "country": "China",
+      "school": "Beijing Institute of Fashion Technology - BIFT"
+    }
+  ]
+}
