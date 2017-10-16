@@ -96,77 +96,15 @@ $student-tile: 140px;
 
   .teaser-container {
     position: relative;
+    height: 0;
+    padding-bottom: 56.25%;
 
-    video {
-      width: 100vw;
-    }
-
-    .play-container {
+    .teaser {
       position: absolute;
-      top: calc(50vh - 75px); // TODO fix
-      left: calc(50vw - 30px);
-      transition: opacity 1s;
-      cursor: pointer;
-
-      &.hidden {
-        opacity: 0;
-      }
-    }
-
-    .play {
-      display: block;
-      width: 0;
-      height: 0;
-      border-top: $size solid transparent;
-      border-bottom: $size solid transparent;
-      border-left: ($size * $ratio) solid $play-button-color;
-      position: relative;
-      z-index: 1;
-      transition: all $transition-time;
-      left: ($size * 0.2);
-      
-      &:before {
-        content: '';
-        position: absolute;
-        top: ($size * -1.5);
-        left: ($size * -2.3);
-        bottom: ($size * -1.5);
-        right: ($size * -0.7);
-        border-radius: 50%;
-        border: ($size * 0.2) solid $play-button-color;
-        z-index: 2;
-        transition: all $transition-time;
-      }
-
-      &:after {
-        content: '';
-        opacity: 0;
-        transition: opacity ($transition-time * 2);
-      }
-      
-      &:hover,
-      &:focus {
-        &:before {
-           transform: scale(1.1);
-        }
-      }
-      
-      &.active {
-        border-color: transparent;
-        
-        &:after {
-          content: '';
-          opacity: 1;
-          width: ($size);
-          height: ($size * 1.6);
-          background: $play-button-color;
-          position: absolute;
-          right: ($size * 0.1);
-          top: ($size * -0.8);
-          border-left: ($size * 0.4) solid $play-button-color;
-          box-shadow: inset ($size * 0.6) 0 0 0 $white-shadow;
-        }
-      }
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
     }
   }
 

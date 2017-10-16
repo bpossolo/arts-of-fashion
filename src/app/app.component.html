@@ -43,22 +43,13 @@
   </div>
 
   <div class="teaser-container">
-    <video
-      #teaser
-      poster="/assets/images/runway-finale-web.jpg"
-      (ended)="onVideoEnded()"
-      preload>
-      <source src="/assets/video/teaser.mp4" type="video/mp4">
-    </video>
-
-    <div
-      class="play-container"
-      [class.hidden]="playing">
-      <div
-        class="play"
-        (click)="playVideo()">
-      </div>
-    </div>
+    <iframe
+      class="teaser"
+      src="https://player.vimeo.com/video/238300860"
+      width="640"
+      height="480"
+      frameborder="0">
+    </iframe>
   </div>
 
   <div class="content">
@@ -168,7 +159,7 @@
       <div class="students">
         <div
           class="student"
-          [style.background-image]="getSketchBackgroundImageStyle(student)"
+          [style.background-image]="getSketchBackgroundImageStyle(student.image)"
           *ngFor="let student of students">
           <div class="overlay">
             <div class="name">
