@@ -1,5 +1,25 @@
 <div class="app">
-  <div class="hero">
+
+  <div class="banner">
+
+    <a
+      class="home-link"
+      href="/">
+      <span class="a">
+        A
+      </span>
+      <span class="o">
+        O
+      </span>
+      <span class="f">
+        F
+      </span>
+    </a>
+
+    <time datetime="2017-10-22 14:00">
+      Sunday, October 22, 2017
+    </time>
+
     <h1>
       <span class="name">
         <span class="arts">Arts</span>
@@ -7,78 +27,79 @@
         <span class="fashion">Fashion</span>
         <span class="foundation">Foundation</span>
       </span>
-      <span class="presents">presents</span>
       <span class="show">2017 Fashion Show</span>
     </h1>
+
+    <p class="location">
+      555 California St
+    </p>
 
     <a
       class="jump-to-tickets"
       href="#tickets">
       Tickets
     </a>
+
+  </div>
+
+  <div class="teaser-container">
+    <video
+      #teaser
+      poster="/assets/images/runway-finale-web.jpg"
+      (ended)="onVideoEnded()"
+      preload>
+      <source src="/assets/video/teaser.mp4" type="video/mp4">
+    </video>
+
+    <div
+      class="play-container"
+      [class.hidden]="playing">
+      <div
+        class="play"
+        (click)="playVideo()">
+      </div>
+    </div>
   </div>
 
   <div class="content">
 
-    <section class="event-details">
+    <h2>
+      2017 Theme
+    </h2>
+    <p class="theme">Displacement</p>
 
-      <h2>
-        2017 Theme
-      </h2>
-      <div class="detail">
-        <p class="theme">Displacement</p>
-      </div>
-
+    <section class="event-details separator">
       <h2>
         International Fashion Student Competition
       </h2>
       <div class="detail">
-        <p class="date">October 22</p>
-        <p class="location">555 California St</p>
+        <time
+          class="date"
+          datetime="2017-10-22">
+          October 22
+        </time>
+        <p class="location">
+          555 California St
+        </p>
       </div>
 
       <h3>Runway Show</h3>
       <div class="detail">
-        <p class="time">2pm - 4pm</p>
+        <time
+          class="time"
+          datetime="2017-10-22 14:00">
+          2pm - 4pm
+        </time>
         <p class="location">Plaza</p>
       </div>
 
-      <h2>
-        Fashion Seminar Awards Ceremony
-      </h2>
-      <div class="detail">
-        <p class="date">October 23</p>
-        <p class="location">555 California St</p>
-      </div>
-      
-      <h3>Portfolio Review</h3>
-      <div class="detail">
-        <p class="time">10am - 12pm</p>
-        <p class="location">Gallery</p>
-      </div>
-
-      <h3>Fashion Seminar</h3>
-      <div class="detail">
-        <p class="time">2pm - 4pm</p>
-        <p class="location">Auditorium</p>
-      </div>
-
-      <h3>Cocktail Reception</h3>
-      <div class="detail">
-        <p class="time">6pm</p>
-        <p class="location">Gallery</p>
-      </div>
-
-      <h3>Awards Ceremony</h3>
-      <div class="detail">
-        <p class="time">7pm - 9pm</p>
-        <p class="location">Auditorium</p>
-      </div>
     </section>
 
     <section class="ticketing-details">
 
-      <h2 id="tickets">Fashion Show Tickets</h2>
+      <h2 id="tickets">
+        Tickets
+      </h2>
     
       <table class="pricing">
         <tr>
@@ -137,53 +158,149 @@
 
     </section>
 
-    <section class="participants">
-      <h2>Participants</h2>
-      <!-- <p>
+    <section class="candidates separator">
+      <h2>Candidates</h2>
+      <p class="description">
         Below is the list of students selected for the 2017 Arts of Fashion Competition.
         Congratulations!
       </p>
       
-      <h3>Fashion</h3>
-      
       <div class="students">
         <div
           class="student"
-          *ngFor="let student of students.fashion">
-          <div class="name">{{student.name}}</div>
-          <div class="location">{{student.location}}, {{student.country}}</div>
-          <div class="school">{{student.school}}</div>
+          [style.background-image]="getSketchBackgroundImageStyle(student)"
+          *ngFor="let student of students">
+          <div class="overlay">
+            <div class="name">
+              {{student.name}}
+            </div>
+            <div class="location">
+              {{student.location}}
+            </div>
+            <div class="country">
+              {{student.country}}
+            </div>
+            <div class="school">
+              {{student.school}}
+            </div>
+          </div>
         </div>
       </div>
-      
-      <h3>Accessory</h3>
-      
-      <div class="students">
-        <div
-          class="student"
-          *ngFor="let student of students.accessory">
-          <div class="name">{{student.name}}</div>
-          <div class="location">{{student.location}}, {{student.country}}</div>
-          <div class="school">{{student.school}}</div>
-        </div>
-      </div> -->
 
     </section>
 
-    <section class="about">
-      <h2>About Us</h2>
+    <div class="parallax"></div>
+
+    <section class="judges">
+
+      <h2>Jury Committee</h2>
+
       <p class="description">
-        The Arts of Fashion Foundation is a San Francisco-based 501(c)(3), 
-        public, non-profit organization, linking both academics and professionals 
-        alike and is dedicated in fostering international cultural exchange 
-        through the creation of a variety of educational programs meant to 
-        facilitate critical thinking and advance the field of fashion among 
-        artists, designers, scholars and students. The primary focus of the 
-        foundation is the continuous support of creativity and design process 
-        in fashion and the arts linked to it.
+        The Jury Committee selected the top 50 international candidates 
+        in Fashion and Accessories from over 300 applicants.
+        The selection process was based entirely on the candidates' 2D 
+        portfolio submissions under this year’s theme DISPLACEMENT.
+        Thanks to all of them.
       </p>
+
+      <div class="members">
+        <div
+          class="member"
+          *ngFor="let judge of judges">
+          <img [src]="judge.image">
+          <div class="overlay">
+            <p class="name">{{judge.name}}</p>
+            <p class="location">{{judge.location}}</p>
+            <p class="org">{{judge.org}}</p>
+          </div>
+        </div>
+      </div>
+
     </section>
 
-    <img class="sketch-1" src="/assets/images/sketch-3-block-1.jpg">
-    <img class="sketch-2" src="/assets/images/sketch-3-block-2.jpg">
+    <section class="event-details separator">
+      <h2>
+        Fashion Seminar Awards Ceremony
+      </h2>
+      <p class="caveat">
+        reserved for candidates, family &amp; friends and by special invitation
+      </p>
+      <div class="detail">
+        <time
+          class="date"
+          datetime="2017-10-23">
+          October 23
+        </time>
+        <p class="location">555 California St</p>
+      </div>
+      
+      <h3>Portfolio Review</h3>
+      <div class="detail">
+        <time
+          class="time"
+          datetime="2017-10-23 10:00">
+          10am - 12pm
+        </time>
+        <p class="location">Gallery</p>
+      </div>
+
+      <h3>Fashion Seminar</h3>
+      <div class="detail">
+        <time
+          class="time"
+          datetime="2017-10-23 14:00">
+          2pm - 4pm
+        </time>
+        <p class="location">Auditorium</p>
+      </div>
+
+      <h3>Cocktail Reception</h3>
+      <div class="detail">
+        <time
+          class="time"
+          datetime="2017-10-23 18:00">
+          6pm
+        </time>
+        <p class="location">Gallery</p>
+      </div>
+
+      <h3>Awards Ceremony</h3>
+      <div class="detail">
+        <time
+          class="time"
+          datetime="2017-10-23 19:00">
+          7pm - 9pm
+        </time>
+        <p class="location">Auditorium</p>
+      </div>
+
+    </section>
+
+    <section class="about separator">
+      <h2>About Us</h2>
+      <div class="description-and-team">
+        <p class="description">
+          The Arts of Fashion Foundation is a San Francisco-based 501(c)(3), 
+          public, non-profit organization, linking both academics and professionals 
+          alike and is dedicated in fostering international cultural exchange 
+          through the creation of a variety of educational programs meant to 
+          facilitate critical thinking and advance the field of fashion among 
+          artists, designers, scholars and students. The primary focus of the 
+          foundation is the continuous support of creativity and design process 
+          in fashion and the arts linked to it.
+        </p>
+
+        <img
+          class="nathalie-and-team"
+          src="/assets/images/nathalie-and-team.jpg">
+      </div>
+    </section>
+
+    <img class="sketch sketch-1" src="/assets/images/sketch-3-block-1.jpg">
+    <img class="sketch sketch-2" src="/assets/images/sketch-3-block-2.jpg">
+    <img class="sketch sketch-3" src="/assets/images/sketch-2-block-1.jpg">
+    <img class="sketch sketch-4" src="/assets/images/sketch-2-block-2.jpg">
+
+  </div>
+  <footer></footer>
 </div>

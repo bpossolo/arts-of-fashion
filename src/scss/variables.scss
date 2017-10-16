@@ -1,3 +1,4 @@
+$dark-grey: #2c3e50;
 $elephant-grey: #888;
 $light-grey: #d8d8d8;
 $pale-grey: #e2e2e2;
@@ -6,8 +7,15 @@ $red: #c90f0f;
 $fuschia: #ec43f2;
 $orange: #fbab02;
 $white: #ffffff;
+$white-shadow: #f9f9f9;
 $black: #000;
 $transluscent-white: rgba(255,255,255,0.8);
 
 
 $light: 300;
+
+// video play button
+$play-button-color: $blue;
+$size: 50px;
+$ratio: 1.2;
+$transition-time: 0.3s;
