@@ -101,8 +101,10 @@ $jury-tile-height: 250px;
 
     .jump-to-tickets {
       position: absolute;
+      width: 100px;
+      left: calc(50% - 50px);
       bottom: 30px;
-      padding: 10px 20px;
+      padding: 10px 0;
       font-size: 12px;
       text-decoration: none;
       border: 2px solid $white;
@@ -310,6 +312,10 @@ $jury-tile-height: 250px;
     }
 
     .seating {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
       .seating-layout {
         display: none;
         height: 500px;
@@ -322,7 +328,6 @@ $jury-tile-height: 250px;
       .seating-layout-mobile {
         display: block;
         width: 95%;
-        margin: 0 auto;
 
         @media (min-width: $desktop) {
           display: none;
@@ -523,10 +528,6 @@ $jury-tile-height: 250px;
     }
 
     .about {
-      @media (min-width: $desktop) {
-        min-width: 900px;
-      }
-
       .description-and-team {
         display: flex;
         flex-direction: column;
