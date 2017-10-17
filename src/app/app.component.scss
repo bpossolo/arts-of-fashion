@@ -315,7 +315,7 @@ $student-tile: 140px;
     }
 
     .parallax {
-      background-image: url('/assets/images/jade-runway-optimized.jpg');
+      background-image: url('/assets/images/jade-runway.jpg');
       height: 300px;
       width: 100%;
       background-attachment: fixed;
@@ -412,14 +412,14 @@ $student-tile: 140px;
     .sketch-1 {
       height: 400px;
       position: absolute;
-      right: 0;
+      left: 0;
       top: 15px;
     }
 
     .sketch-2 {
       height: 400px;
       position: absolute;
-      left: 0;
+      right: 0;
       top: 15px;
     }
 

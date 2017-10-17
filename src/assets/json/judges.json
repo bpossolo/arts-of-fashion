@@ -3,48 +3,48 @@
     "name": "Beata Kania",
     "location": "Chicago, USA",
     "org": "School of the Art Institute of Chicago",
-    "image": "/assets/images/judge-1.jpg"
+    "image": "/assets/images/judges/judge-1.jpg"
   },
   {
     "name": "Danielle Martin",
     "location": "Montreal, Canada",
     "org": "University of Quebec - UQAM",
-    "image": "/assets/images/judge-2.jpg"
+    "image": "/assets/images/judges/judge-2.jpg"
   },
   {
     "name": "JaeYoon Jeong",
     "location": "Philadelphia, USA",
     "org": "Drexel University",
-    "image": "/assets/images/judge-3.jpg"
+    "image": "/assets/images/judges/judge-3.jpg"
   },
   {
     "name": "Janice Paredes",
     "location": "San Francisco, USA",
     "org": "Fashion Institute of Design & Merchandising - FIDM",
-    "image": "/assets/images/judge-4.jpg"
+    "image": "/assets/images/judges/judge-4.jpg"
   },
   {
     "name": "Nathalie Doucet",
     "location": "San Francisco, USA",
     "org": "Arts of Fashion Foundation ",
-    "image": "/assets/images/judge-5.jpg"
+    "image": "/assets/images/judges/judge-5.jpg"
   },
   {
     "name": "Min Sun Lee",
     "location": "Seoul, South Korea",
     "org": "Myongji University",
-    "image": "/assets/images/judge-6.jpg"
+    "image": "/assets/images/judges/judge-6.jpg"
   },
   {
     "name": "Ling Zhang",
     "location": "Mount Pleasant, USA",
     "org": "Central Michigan University",
-    "image": "/assets/images/judge-7.jpg"
+    "image": "/assets/images/judges/judge-7.jpg"
   },
   {
     "name": "Jiah Lim",
     "location": "Daegu, South Korea",
     "org": "Daegu University",
-    "image": "/assets/images/judge-8.jpg"
+    "image": "/assets/images/judges/judge-8.jpg"
   }
 ]
