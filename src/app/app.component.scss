@@ -124,7 +124,7 @@ $student-tile: 140px;
       font-size: 40px;
       color: $blue;
       text-transform: uppercase;
-      margin-bottom: 30px;
+      text-align: center;
     }
 
     h2 {
@@ -272,8 +272,6 @@ $student-tile: 140px;
           height: $student-tile;
           width: $student-tile;
           margin: 5px;
-          background-size: cover;
-          background-position: center;
 
           &:hover .overlay {
             display: flex;
