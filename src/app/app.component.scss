@@ -1,6 +1,12 @@
 @import '../scss/variables.scss';
 
+$student-tile-small: 120px;
 $student-tile: 140px;
+
+$jury-tile-small-width: 130px;
+$jury-tile-small-height: 194px;
+$jury-tile-width: 168px;
+$jury-tile-height: 250px;
 
 .app {
   font-family: 'GillSans';
@@ -9,16 +15,12 @@ $student-tile: 140px;
   .banner {
     position: relative;
     background-color: $black;
-    height: 50vh;
+    height: 70vh;
     color: $white;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
-    @media (min-width: $desktop) {
-      height: 70vh;
-    }
 
     .home-link {
       position: absolute;
@@ -56,8 +58,12 @@ $student-tile: 140px;
       margin: 20px 0;
 
       .name {
-        font-size: 23px;
+        font-size: 20px;
         text-transform: uppercase;
+
+        @media (min-width: $iphone6) {
+          font-size: 23px;
+        }
 
         @media (min-width: $desktop) {
           font-size: 50px;
@@ -79,9 +85,13 @@ $student-tile: 140px;
       }
 
       .show {
-        font-size: 23px;
+        font-size: 20px;
         font-weight: $light;
         text-transform: uppercase;
+
+        @media (min-width: $iphone6) {
+          font-size: 23px;
+        }
 
         @media (min-width: $desktop) {
           font-size: 40px;
@@ -337,9 +347,24 @@ $student-tile: 140px;
 
         .student {
           position: relative;
-          height: $student-tile;
-          width: $student-tile;
+          height: $student-tile-small;
+          width: $student-tile-small;
           margin: 5px;
+
+          @media (min-width: $iphone6) {
+            height: $student-tile;
+            width: $student-tile;
+          }
+
+          img {
+            height: $student-tile-small;
+            width: $student-tile-small;
+
+            @media (min-width: $iphone6) {
+              height: $student-tile;
+              width: $student-tile;
+            }
+          }
 
           &:hover .overlay {
             display: flex;
@@ -350,14 +375,19 @@ $student-tile: 140px;
             position: absolute;
             top: 0;
             left: 0;
-            height: $student-tile;
-            width: $student-tile;
+            height: $student-tile-small;
+            width: $student-tile-small;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             background-color: $transluscent-white;
             text-align: center;
             padding: 4px;
+
+            @media (min-width: $iphone6) {
+              height: $student-tile;
+              width: $student-tile;
+            }
 
             .name {
               font-weight: bold;
@@ -429,11 +459,14 @@ $student-tile: 140px;
 
         .member {
           margin-bottom: 20px;
-          height: 250px;
+          width: $jury-tile-small-width;
+          height: $jury-tile-small-height;
           position: relative;
 
           @media (min-width: $desktop) {
             margin-bottom: 0;
+            width: $jury-tile-width;
+            height: $jury-tile-height;
           }
 
           &:hover .overlay {
@@ -441,21 +474,32 @@ $student-tile: 140px;
           }
 
           img {
-            height: 250px;
+            width: $jury-tile-small-width;
+            height: $jury-tile-small-height;
+
+            @media (min-width: $desktop) {
+              width: $jury-tile-width;
+              height: $jury-tile-height;
+            }
           }
           
           .overlay {
             position: absolute;
             top: 0;
             left: 0;
-            width: 168px;
-            height: 250px;
+            width: $jury-tile-small-width;
+            height: $jury-tile-small-height;
             display: none;
             background-color: $transluscent-white;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             padding: 10px;
+
+            @media (min-width: $desktop) {
+              width: $jury-tile-width;
+              height: $jury-tile-height;
+            }
             
             p {
               text-align: center;
