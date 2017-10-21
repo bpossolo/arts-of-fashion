@@ -276,6 +276,10 @@ $jury-tile-height: 250px;
               font-size: 18px;
               width: 200px;
             }
+
+            &.soldout {
+              text-decoration: line-through;
+            }
           }
 
           .price {
@@ -285,6 +289,10 @@ $jury-tile-height: 250px;
 
             @media (min-width: $desktop) {
               font-size: 18px;
+            }
+
+            &.soldout {
+              text-decoration: line-through;
             }
           }
 
@@ -297,13 +305,26 @@ $jury-tile-height: 250px;
               font-size: 12px;
 
               @media (min-width: $desktop) {
-                padding: 10px 20px;
+                padding: 10px 0;
                 font-size: 14px;
+                min-width: 105px;
               }
 
               &:hover {
                 color: $white;
                 background-color: $blue;
+              }
+            }
+
+            .soldout {
+              display: inline-block;
+              cursor: not-allowed;
+              padding: 12px 14px;
+              font-size: 12px;
+
+              @media (min-width: $desktop) {
+                padding: 12px 25px;
+                font-size: 14px;
               }
             }
           }
